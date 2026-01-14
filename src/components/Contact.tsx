@@ -4,14 +4,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, MapPin, Clock, Send, Facebook, Instagram, Banknote, CreditCard } from "lucide-react";
 import { toast } from "sonner";
-
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Съобщението е изпратено успешно! Ще се свържем с вас скоро.");
@@ -21,9 +19,7 @@ export function Contact() {
       message: ""
     });
   };
-
-  return (
-    <section id="contact" className="py-20 md:py-28 bg-background">
+  return <section id="contact" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -80,16 +76,10 @@ export function Contact() {
             <div className="bg-secondary rounded-2xl p-6 border border-border">
               <h3 className="font-display font-bold text-lg text-foreground mb-4">Последвайте ни</h3>
               <div className="flex gap-4">
-                <a 
-                  href="#" 
-                  className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center hover:bg-accent transition-colors group"
-                >
+                <a href="#" className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center hover:bg-accent transition-colors group">
                   <Facebook className="w-5 h-5 text-primary-foreground group-hover:text-accent-foreground" />
                 </a>
-                <a 
-                  href="#" 
-                  className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center hover:bg-accent transition-colors group"
-                >
+                <a href="#" className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center hover:bg-accent transition-colors group">
                   <Instagram className="w-5 h-5 text-primary-foreground group-hover:text-accent-foreground" />
                 </a>
               </div>
@@ -97,45 +87,8 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-secondary rounded-2xl p-6 md:p-8 border border-border">
-            <h3 className="font-display font-bold text-xl text-foreground mb-6">Изпратете запитване</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Input
-                  placeholder="Вашето име"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  className="bg-background"
-                />
-              </div>
-              <div>
-                <Input
-                  type="tel"
-                  placeholder="Телефон за връзка"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  required
-                  className="bg-background"
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="Вашето съобщение..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={4}
-                  className="bg-background resize-none"
-                />
-              </div>
-              <Button type="submit" variant="gold" className="w-full" size="lg">
-                <Send className="w-4 h-4 mr-2" />
-                Изпрати съобщение
-              </Button>
-            </form>
-          </div>
+          
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

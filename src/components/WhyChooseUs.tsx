@@ -26,8 +26,7 @@ const features = [{
   description: "Поръчай бързо и лесно без нужда от създаване на акаунт или регистрация."
 }];
 export function WhyChooseUs() {
-  return (
-    <section id="about" className="py-20 md:py-28 bg-background">
+  return <section id="about" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Side */}
@@ -52,22 +51,9 @@ export function WhyChooseUs() {
             </p>
 
             {/* Features Grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
-                    <p className="text-muted-foreground text-sm">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
