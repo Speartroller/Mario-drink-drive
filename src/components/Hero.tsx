@@ -80,7 +80,16 @@ export function Hero() {
           }, {
             icon: "10+",
             label: "години опит"
-          }].map((item, index) => {})}
+          }].map((item, index) => (
+              <div key={index} className="flex flex-col items-center gap-2 p-4 rounded-xl bg-primary-foreground/5 backdrop-blur-sm">
+                {typeof item.icon === "string" ? (
+                  <span className="text-2xl font-bold text-accent">{item.icon}</span>
+                ) : (
+                  <item.icon className="w-6 h-6 text-accent" />
+                )}
+                <span className="text-sm text-primary-foreground/80">{item.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

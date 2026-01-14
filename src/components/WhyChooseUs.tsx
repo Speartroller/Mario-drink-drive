@@ -26,7 +26,8 @@ const features = [{
   description: "Поръчай бързо и лесно без нужда от създаване на акаунт или регистрация."
 }];
 export function WhyChooseUs() {
-  return <section id="about" className="py-20 md:py-28 bg-background">
+  return (
+    <section id="about" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image Side */}
@@ -35,9 +36,6 @@ export function WhyChooseUs() {
               <img src={driverImage} alt="Професионален шофьор" className="w-full h-[500px] object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
             </div>
-            
-            {/* Floating Stats Card */}
-            
           </div>
 
           {/* Content Side */}
@@ -49,16 +47,27 @@ export function WhyChooseUs() {
               Ти пиеш, ние караме!
             </h2>
             <p className="text-muted-foreground text-lg mb-8">
-              Lucky Drive е твоят надежден партньор за безопасно прибиране до дома. 
+              karaiutre.com е твоят надежден партньор за безопасно прибиране до дома. 
               Насладете се на вечерта без притеснения - ние ще се погрижим за теб и колата ти.
             </p>
 
             {/* Features Grid */}
             <div className="grid sm:grid-cols-2 gap-6">
-              {features.map((feature, index) => {})}
+              {features.map((feature, index) => (
+                <div key={index} className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <feature.icon className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">{feature.title}</h3>
+                    <p className="text-muted-foreground text-sm">{feature.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
