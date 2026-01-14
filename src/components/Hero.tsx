@@ -1,20 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, Shield, Clock, MapPin } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-
 export function Hero() {
-  return (
-    <section 
-      id="home" 
-      className="relative min-h-screen flex items-center justify-center pt-16 md:pt-20 overflow-hidden"
-    >
+  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 md:pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img 
-          src={heroBg} 
-          alt="Luxury car at night" 
-          className="w-full h-full object-cover"
-        />
+        <img src={heroBg} alt="Luxury car at night" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/95" />
       </div>
 
@@ -34,13 +25,17 @@ export function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.1s" }}>
+          <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 max-w-2xl mx-auto animate-slide-up" style={{
+          animationDelay: "0.1s"
+        }}>
             Поръчай личен шофьор, който ще те закара до дома с твоята кола. 
             Бързо, безопасно и без регистрация.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up" style={{
+          animationDelay: "0.2s"
+        }}>
             <Button variant="hero" size="xl" className="w-full sm:w-auto group">
               Поръчай онлайн
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -54,36 +49,38 @@ export function Hero() {
           </div>
 
           {/* Quick Contact Numbers */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-slide-up" style={{ animationDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-slide-up" style={{
+          animationDelay: "0.3s"
+        }}>
             <a href="tel:+359888123456" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
               <MapPin className="w-4 h-4 text-accent" />
               <span className="font-medium">София:</span>
-              <span>0888 123 456</span>
+              <span>+359 88 217 7318</span>
             </a>
             <a href="tel:+359899654321" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
-              <MapPin className="w-4 h-4 text-accent" />
-              <span className="font-medium">Варна:</span>
-              <span>0899 654 321</span>
+              
+              
+              
             </a>
           </div>
 
           {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            {[
-              { icon: Shield, label: "100% сигурност" },
-              { icon: Clock, label: "24/7 наличност" },
-              { icon: "5000+", label: "доволни клиенти" },
-              { icon: "10+", label: "години опит" },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center p-4 rounded-xl bg-primary-foreground/5 border border-primary-foreground/10">
-                {typeof item.icon === "string" ? (
-                  <span className="text-2xl font-bold text-accent mb-1">{item.icon}</span>
-                ) : (
-                  <item.icon className="w-6 h-6 text-accent mb-1" />
-                )}
-                <span className="text-sm text-primary-foreground/70">{item.label}</span>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto animate-fade-in" style={{
+          animationDelay: "0.4s"
+        }}>
+            {[{
+            icon: Shield,
+            label: "100% сигурност"
+          }, {
+            icon: Clock,
+            label: "24/7 наличност"
+          }, {
+            icon: "5000+",
+            label: "доволни клиенти"
+          }, {
+            icon: "10+",
+            label: "години опит"
+          }].map((item, index) => {})}
           </div>
         </div>
       </div>
@@ -94,6 +91,5 @@ export function Hero() {
           <div className="w-1.5 h-3 bg-accent rounded-full animate-bounce" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
