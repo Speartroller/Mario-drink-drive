@@ -52,15 +52,10 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 animate-slide-up" style={{
           animationDelay: "0.3s"
         }}>
-            <a href="tel:+359888123456" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
+            <a href="tel:+359882177318" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
               <MapPin className="w-4 h-4 text-accent" />
               <span className="font-medium">София:</span>
               <span>+359 88 217 7318</span>
-            </a>
-            <a href="tel:+359899654321" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
-              
-              
-              
             </a>
           </div>
 
@@ -75,11 +70,11 @@ export function Hero() {
             icon: Clock,
             label: "24/7 наличност"
           }, {
-            icon: "5000+",
-            label: "доволни клиенти"
+            icon: "20",
+            label: "мин. до адреса"
           }, {
-            icon: "10+",
-            label: "години опит"
+            icon: MapPin,
+            label: "София и околности"
           }].map((item, index) => (
               <div key={index} className="flex flex-col items-center gap-2 p-4 rounded-xl bg-primary-foreground/5 backdrop-blur-sm">
                 {typeof item.icon === "string" ? (

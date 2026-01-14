@@ -1,4 +1,4 @@
-import { MapPin, Clock, Zap } from "lucide-react";
+import { MapPin, Clock, Zap, Banknote, CreditCard } from "lucide-react";
 
 const pricingData = [
   { destination: "Перник", priceBGN: 100, priceEUR: 51.13 },
@@ -29,6 +29,25 @@ export function Pricing() {
           </p>
         </div>
 
+        {/* Base Rate Card */}
+        <div className="max-w-2xl mx-auto mb-10">
+          <div className="bg-primary rounded-2xl p-6 md:p-8 text-primary-foreground shadow-xl">
+            <h3 className="font-display font-bold text-xl md:text-2xl mb-6 text-center">Базова тарифа</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="bg-primary-foreground/10 rounded-xl p-5 text-center">
+                <p className="text-primary-foreground/70 text-sm mb-2">Начална такса</p>
+                <p className="text-3xl font-bold">20<span className="text-lg font-medium ml-1">лв</span></p>
+                <p className="text-sm text-primary-foreground/60 mt-1">≈ 10.23 €</p>
+              </div>
+              <div className="bg-primary-foreground/10 rounded-xl p-5 text-center">
+                <p className="text-primary-foreground/70 text-sm mb-2">На километър</p>
+                <p className="text-3xl font-bold">3<span className="text-lg font-medium ml-1">лв/км</span></p>
+                <p className="text-sm text-primary-foreground/60 mt-1">≈ 1.53 €/км</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* 24/7 and 20 min badges */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground shadow-lg">
@@ -38,6 +57,18 @@ export function Pricing() {
           <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground shadow-lg">
             <Zap className="w-5 h-5 text-accent" />
             <span className="font-semibold">До 20 минути на адреса</span>
+          </div>
+        </div>
+
+        {/* Payment Methods */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <div className="flex items-center gap-2 px-5 py-3 rounded-xl bg-card border border-border shadow-sm">
+            <Banknote className="w-5 h-5 text-accent" />
+            <span className="font-medium text-foreground">В брой</span>
+          </div>
+          <div className="flex items-center gap-2 px-5 py-3 rounded-xl bg-card border border-border shadow-sm">
+            <CreditCard className="w-5 h-5 text-accent" />
+            <span className="font-medium text-foreground">Банков превод (Revolut)</span>
           </div>
         </div>
 
