@@ -38,7 +38,7 @@ export function Header() {
               </svg>
             </div>
             <span className="font-display font-bold text-lg text-primary-foreground">
-              karai<span className="text-accent">utre</span>.com
+              karai<span className="text-accent">utre</span>​
             </span>
           </a>
 
